@@ -20,12 +20,15 @@ full_model <- ret.opts$fullmodel
 reduced_model <- ret.opts$reducedmodel
 plot_cov <- ret.opts$plotting_covariate
 
-sample_id <- dir(file.path(base_dir,"kallisto_quant_output"))
+#check sample_id <- dir(file.path(base_dir,"kallisto_quant_output"))
+sample_id <- dir(file.path(base_dir))
 print(sample_id)
-kal_dirs <- sapply(sample_id, function(id) file.path(base_dir, "kallisto_quant_output", id))
+#kal_dirs <- sapply(sample_id, function(id) file.path(base_dir, "kallisto_quant_output", id))
+kal_dirs <- sapply(sample_id, function(id) file.path(base_dir, id))
 print(kal_dirs)
 
-s2c <- read.table(file.path(base_dir, design_matrix), header = TRUE, stringsAsFactors=FALSE)
+#s2c <- read.table(file.path(base_dir, design_matrix), header = TRUE, stringsAsFactors=FALSE)
+s2c <- read.table(file.path(design_matrix), header = TRUE, stringsAsFactors=FALSE)
 
 print(s2c)
 s2c <- dplyr::mutate(s2c, path = kal_dirs)
