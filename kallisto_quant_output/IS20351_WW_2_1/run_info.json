@@ -1,9 +1,0 @@
-{
-	"n_targets": 36338,
-	"n_bootstraps": 60,
-	"n_processed": 23403237,
-	"kallisto_version": "0.42.3",
-	"index_version": 10,
-	"start_time": "Mon Jul 10 16:48:57 2017",
-	"call": "kallisto quant -i Sorghum_bicolor.Sorbi1.20.cdna.all.fa.index -o IS20351_WW_2_1 -b 60 -l -s IS20351_WW_2_1.fastq.gz IS20351_WW_2_2.fastq.gz"
-}
